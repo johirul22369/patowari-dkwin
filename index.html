@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>PATOWARI'S HACK - DK WIN</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@400;600;700&family=Rubik:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * {
     box-sizing: border-box;
@@ -18,11 +18,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #0b0e14;
+    background-color: #161e26;
     font-family: 'Poppins', sans-serif;
   }
 
-  /* Background Iframe */
   #game-frame {
     width: 100%;
     height: 100%;
@@ -33,7 +32,6 @@
     z-index: 1;
   }
 
-  /* RGB Keyframes */
   @keyframes rgbFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -41,36 +39,35 @@
   }
 
   @keyframes rgbGlow {
-    0% { box-shadow: 0 0 15px rgba(255, 0, 85, 0.7), 0 0 30px rgba(0, 240, 255, 0.4); }
-    33% { box-shadow: 0 0 15px rgba(0, 255, 136, 0.7), 0 0 30px rgba(255, 0, 221, 0.4); }
-    66% { box-shadow: 0 0 15px rgba(0, 170, 255, 0.7), 0 0 30px rgba(255, 215, 0, 0.4); }
-    100% { box-shadow: 0 0 15px rgba(255, 0, 85, 0.7), 0 0 30px rgba(0, 240, 255, 0.4); }
+    0% { box-shadow: 0 0 14px rgba(255, 0, 128, 0.55), 0 0 24px rgba(0, 212, 255, 0.25); }
+    33% { box-shadow: 0 0 14px rgba(0, 255, 136, 0.55), 0 0 24px rgba(255, 0, 200, 0.25); }
+    66% { box-shadow: 0 0 14px rgba(0, 150, 255, 0.55), 0 0 24px rgba(255, 180, 0, 0.25); }
+    100% { box-shadow: 0 0 14px rgba(255, 0, 128, 0.55), 0 0 24px rgba(0, 212, 255, 0.25); }
   }
 
-  /* Floating Overlay Container */
+  /* Main 220px Floating Overlay */
   #predictor-wrapper {
     position: fixed;
-    top: 25px;
-    left: 15px;
-    width: 310px;
+    top: 115px;
+    left: 16px;
+    width: 220px;
     z-index: 9999;
     touch-action: none;
   }
 
-  /* Outer RGB Border Card */
   .rgb-border-box {
     position: relative;
-    padding: 3px;
-    border-radius: 18px;
-    background: linear-gradient(45deg, #ff0055, #ffcc00, #00ff88, #00d4ff, #aa00ff, #ff0055);
-    background-size: 400% 400%;
+    padding: 2.2px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #ff2a85, #ff6a00, #ffd000, #00e676, #00b0ff, #aa00ff, #ff2a85);
+    background-size: 350% 350%;
     animation: rgbFlow 4s ease infinite, rgbGlow 4s ease infinite;
   }
 
   .panel-inner {
-    background: #10131a;
-    border-radius: 15px;
-    padding: 8px 10px 10px 10px;
+    background: #141218;
+    border-radius: 11px;
+    padding: 5px 7px 6px 7px;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -82,18 +79,11 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Orbitron', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    color: #00ff88;
-    letter-spacing: 1px;
-    padding: 2px 6px;
-    text-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
-  }
-
-  .ticker-bar span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    font-size: 6.5px;
+    font-weight: 800;
+    color: #00e676;
+    letter-spacing: 0.6px;
+    padding: 1px 2px;
   }
 
   /* Header Bar */
@@ -101,11 +91,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #181c26;
-    border: 1px solid #2a3040;
-    border-radius: 10px;
-    padding: 6px 10px;
-    margin: 4px 0 8px 0;
+    background: #1c1922;
+    border: 1px solid #2c2736;
+    border-radius: 7px;
+    padding: 4px 7px;
+    margin: 2px 0 5px 0;
     cursor: grab;
   }
 
@@ -115,10 +105,10 @@
 
   .header-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 13px;
+    font-size: 9.5px;
     font-weight: 900;
-    letter-spacing: 0.8px;
-    background: linear-gradient(90deg, #ff3366, #ffcc00, #00ff88, #00d4ff);
+    letter-spacing: 0.4px;
+    background: linear-gradient(90deg, #ff4d8d, #ff9e44, #00e676, #4dd0e1);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,93 +116,80 @@
   }
 
   .close-btn {
-    width: 22px;
-    height: 22px;
-    border-radius: 6px;
-    background: rgba(255, 51, 102, 0.15);
-    border: 1px solid #ff3366;
-    color: #ff3366;
-    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    background: rgba(0, 230, 118, 0.1);
+    border: 1px solid rgba(0, 230, 118, 0.45);
+    color: #00e676;
+    font-size: 8.5px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 0.2s;
-  }
-
-  .close-btn:hover {
-    background: #ff3366;
-    color: #fff;
+    line-height: 1;
   }
 
   /* Login Section */
   #login-view {
-    padding: 12px 6px;
+    padding: 8px 4px;
     text-align: center;
   }
 
   .login-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
     object-fit: cover;
-    border: 2px solid #00ff88;
-    margin: 0 auto 8px auto;
+    border: 1.5px solid #ff4d8d;
+    margin: 0 auto 5px auto;
     display: block;
-    box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
   }
 
   .login-label {
     font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
-    color: #a0aec0;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
+    font-size: 7.5px;
+    color: #b0b7c3;
+    margin-bottom: 5px;
+    letter-spacing: 0.4px;
   }
 
   .pass-input {
     width: 100%;
-    padding: 9px 12px;
-    border-radius: 8px;
-    border: 1px solid #2e364a;
-    background: #161a24;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #322c3d;
+    background: #1c1824;
     color: #fff;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 9px;
     text-align: center;
     outline: none;
-    margin-bottom: 8px;
-    transition: 0.2s;
-  }
-
-  .pass-input:focus {
-    border-color: #00d4ff;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    margin-bottom: 5px;
   }
 
   .login-btn {
     width: 100%;
-    padding: 9px;
+    padding: 6px;
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #ff0055, #ff7700, #00ff88, #00d4ff);
-    background-size: 300% 300%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ff3377, #ff6633, #00e676);
+    background-size: 250% 250%;
     animation: rgbFlow 3s ease infinite;
-    color: #000;
+    color: #fff;
     font-family: 'Orbitron', sans-serif;
-    font-size: 12px;
-    font-weight: 900;
+    font-size: 8.5px;
+    font-weight: 800;
     cursor: pointer;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
 
   .error-msg {
-    color: #ff4d6d;
-    font-size: 10px;
-    margin-top: 6px;
+    color: #ff5277;
+    font-size: 7.5px;
+    margin-top: 4px;
     display: none;
-    font-weight: 600;
   }
 
   /* Main Predictor View */
@@ -220,189 +197,181 @@
     display: none;
   }
 
-  /* Market Tabs (30S, 1M, 3M, 5M) */
+  /* Market Tabs */
   .tabs-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    margin-bottom: 8px;
+    gap: 3.5px;
+    margin-bottom: 5px;
   }
 
   .tab-btn {
-    background: #181d29;
-    border: 1px solid #2b3347;
-    color: #94a3b8;
+    background: #1d1a24;
+    border: 1px solid #2e2938;
+    color: #9e9aa8;
     font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
+    font-size: 7.5px;
     font-weight: 700;
-    padding: 6px 0;
-    border-radius: 8px;
+    padding: 4px 0;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
   }
 
   .tab-btn.active {
-    background: linear-gradient(135deg, #00d4ff, #00ff88);
-    color: #080b10;
+    background: linear-gradient(90deg, #ff3d7f, #ff6a5c);
+    color: #ffffff;
     border-color: transparent;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 8px rgba(255, 61, 127, 0.45);
   }
 
-  /* Middle Info Grid */
+  /* Middle Grid: Image + Period/Next Round */
   .middle-grid {
     display: grid;
-    grid-template-columns: 68px 1fr;
-    gap: 8px;
+    grid-template-columns: 46px 1fr;
+    gap: 5px;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .profile-box {
-    width: 68px;
-    height: 68px;
-    border-radius: 12px;
-    padding: 2px;
-    background: linear-gradient(45deg, #ff0055, #00ff88, #00d4ff);
-    background-size: 300% 300%;
-    animation: rgbFlow 3s ease infinite;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #352f42;
   }
 
   .profile-box img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     object-fit: cover;
     display: block;
   }
 
   .period-timer-box {
-    background: #161a24;
-    border: 1px solid #262d3d;
-    border-radius: 10px;
-    padding: 6px 8px;
+    background: #1b1822;
+    border: 1px solid #2a2534;
+    border-radius: 8px;
+    padding: 4px 6px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
   }
 
   .info-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
   }
 
   .info-label {
-    font-size: 9px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6px;
     font-weight: 700;
-    color: #94a3b8;
+    color: #a19ca9;
     display: flex;
     align-items: center;
-    gap: 4px;
-    letter-spacing: 0.4px;
+    gap: 3px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
   }
 
   .dot-live {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
-    background: #00ff88;
-    box-shadow: 0 0 6px #00ff88;
+    background: #ff4d8d;
+    display: inline-block;
   }
 
   .period-val {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 10.5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7.2px;
     font-weight: 700;
-    color: #e2e8f0;
-    letter-spacing: 0.3px;
+    color: #e6e1ee;
+    letter-spacing: 0.2px;
   }
 
   .timer-val {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 13px;
-    font-weight: 900;
-    color: #00ff88;
-    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+    font-family: 'Rubik', sans-serif;
+    font-size: 8.5px;
+    font-weight: 800;
+    color: #ff4d8d;
   }
 
-  /* Signal Display & Wavy Orbs Section */
+  /* Signal Box & Scalloped Orbs */
   .signal-row {
     display: grid;
-    grid-template-columns: 1fr 64px;
-    gap: 8px;
+    grid-template-columns: 1fr 42px;
+    gap: 5px;
     align-items: stretch;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .signal-card {
-    background: linear-gradient(180deg, #102a1c 0%, #0b1c13 100%);
-    border: 1.5px solid #00ff88;
-    border-radius: 12px;
-    padding: 8px 6px;
+    background: #1b1822;
+    border: 1px solid #2b2636;
+    border-radius: 9px;
+    padding: 6px 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.15);
-    transition: all 0.3s ease;
-  }
-
-  .signal-card.big-mode {
-    background: linear-gradient(180deg, #2d1b0a 0%, #1c1005 100%);
-    border-color: #ff9900;
-    box-shadow: inset 0 0 12px rgba(255, 153, 0, 0.2);
   }
 
   .signal-sub {
-    font-size: 8.5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6px;
     font-weight: 700;
-    color: #94a3b8;
-    letter-spacing: 0.6px;
+    color: #9e99a8;
+    letter-spacing: 0.4px;
     margin-bottom: 2px;
   }
 
   .signal-main {
     font-family: 'Orbitron', sans-serif;
-    font-size: 21px;
+    font-size: 13px;
     font-weight: 900;
-    letter-spacing: 1.5px;
-    color: #00ff88;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+    letter-spacing: 0.8px;
+    color: #ff4d8d;
   }
 
-  .signal-card.big-mode .signal-main {
-    color: #ffaa00;
-    text-shadow: 0 0 10px rgba(255, 170, 0, 0.6);
+  .signal-card.small-mode .signal-main {
+    color: #00e676;
   }
 
-  /* Scalloped Wavy-Rim Number Orbs */
   .orbs-col {
+    background: #1b1822;
+    border: 1px solid #2a2534;
+    border-radius: 9px;
+    padding: 4px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
   }
 
   .wavy-orb {
-    width: 31px;
-    height: 31px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
   }
 
   .wavy-orb.green-orb {
-    background: radial-gradient(circle, #16a34a 55%, #14532d 100%);
-    border: 1.5px solid #4ade80;
+    background: radial-gradient(circle, #15803d 55%, #052e16 100%);
+    border: 1px solid #22c55e;
   }
 
   .wavy-orb.red-orb {
-    background: radial-gradient(circle, #e11d48 55%, #881337 100%);
-    border: 1.5px solid #fb7185;
+    background: radial-gradient(circle, #be123c 55%, #4c0519 100%);
+    border: 1px solid #f43f5e;
   }
 
   .wavy-orb svg {
@@ -416,63 +385,57 @@
   .orb-num {
     position: relative;
     z-index: 2;
-    width: 16px;
-    height: 16px;
+    width: 11px;
+    height: 11px;
     background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 9.5px;
-    font-weight: 900;
-    color: #0f172a;
-    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    font-family: 'Rubik', sans-serif;
+    font-size: 7px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
   }
 
-  /* Telegram Join Button */
+  /* Telegram Button (Icon + JOIN TG only) */
   .tg-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
     width: 100%;
-    padding: 8px 10px;
-    border-radius: 10px;
+    padding: 5.5px 8px;
+    border-radius: 7px;
     text-decoration: none;
-    background: linear-gradient(90deg, #ff007f, #ff5500, #aa00ff, #0099ff);
-    background-size: 300% 300%;
-    animation: rgbFlow 3.5s ease infinite;
+    background: linear-gradient(90deg, #ff3d7f, #ff6a5c);
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 800;
-    letter-spacing: 0.6px;
-    box-shadow: 0 3px 12px rgba(255, 0, 127, 0.35);
-    transition: transform 0.15s;
-  }
-
-  .tg-btn:active {
-    transform: scale(0.97);
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255, 61, 127, 0.35);
   }
 
   .tg-icon {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     fill: #ffffff;
+    flex-shrink: 0;
   }
 
   /* Minimized Floating Icon */
   #minimized-icon {
     display: none;
     position: fixed;
-    top: 30px;
+    top: 120px;
     left: 20px;
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(45deg, #ff0055, #ffcc00, #00ff88, #00d4ff);
+    padding: 2px;
+    background: linear-gradient(45deg, #ff2a85, #00e676, #00b0ff);
     background-size: 300% 300%;
     animation: rgbFlow 3s ease infinite, rgbGlow 3s ease infinite;
     z-index: 9999;
@@ -490,26 +453,21 @@
 </head>
 <body>
 
-  <!-- Background Target Site -->
   <iframe id="game-frame" src="https://dkwin9.com/#/register?invitationCode=932152417441"></iframe>
 
-  <!-- Minimized Icon -->
   <div id="minimized-icon" title="Open Predictor">
     <img src="https://cdn.imageurlgenerator.com/uploads/49641014-9dfb-440e-ae20-83044883b063.jpg" alt="Icon">
   </div>
 
-  <!-- Main Floating Predictor -->
   <div id="predictor-wrapper">
     <div class="rgb-border-box">
       <div class="panel-inner">
-        
-        <!-- Top Ticker -->
+
         <div class="ticker-bar">
           <span>★ DK WIN</span>
-          <span>★ DK WIN</span>
+          <span>DK WIN ★</span>
         </div>
 
-        <!-- Draggable Header -->
         <div class="header-bar" id="drag-handle">
           <div class="header-title">PATOWARI'S HACK</div>
           <div class="close-btn" id="minimize-btn">✕</div>
@@ -519,15 +477,14 @@
         <div id="login-view">
           <img class="login-avatar" src="https://cdn.imageurlgenerator.com/uploads/49641014-9dfb-440e-ae20-83044883b063.jpg" alt="Patowari">
           <div class="login-label">ENTER ACCESS KEY</div>
-          <input type="password" id="pass-input" class="pass-input" placeholder="Enter Password...">
-          <button id="login-btn" class="login-btn">UNLOCK VIP</button>
-          <div id="error-msg" class="error-msg">Incorrect Password! Try Again.</div>
+          <input type="password" id="pass-input" class="pass-input" placeholder="Password">
+          <button id="login-btn" class="login-btn">UNLOCK</button>
+          <div id="error-msg" class="error-msg">Wrong Password!</div>
         </div>
 
         <!-- Main Signal Panel -->
         <div id="predictor-view">
-          
-          <!-- Market Tabs -->
+
           <div class="tabs-row">
             <button class="tab-btn active" data-sec="30" data-code="10005">30S</button>
             <button class="tab-btn" data-sec="60" data-code="10001">1M</button>
@@ -535,68 +492,63 @@
             <button class="tab-btn" data-sec="300" data-code="10003">5M</button>
           </div>
 
-          <!-- Image & Period/Timer -->
           <div class="middle-grid">
             <div class="profile-box">
               <img src="https://cdn.imageurlgenerator.com/uploads/49641014-9dfb-440e-ae20-83044883b063.jpg" alt="Patowari">
             </div>
             <div class="period-timer-box">
               <div class="info-line">
-                <span class="info-label"><span class="dot-live"></span> PERIOD</span>
-                <span class="period-val" id="period-display">20261125100050001</span>
+                <span class="info-label"><span class="dot-live"></span> PERIOD:</span>
+                <span class="period-val" id="period-display">20261125100052000</span>
               </div>
               <div class="info-line">
                 <span class="info-label">NEXT ROUND:</span>
-                <span class="timer-val" id="timer-display">030s</span>
+                <span class="timer-val" id="timer-display">028s</span>
               </div>
             </div>
           </div>
 
-          <!-- Signal Box + Scalloped Orbs -->
           <div class="signal-row">
             <div class="signal-card" id="signal-box">
               <div class="signal-sub" id="market-label">AI (30S MARKET)</div>
-              <div class="signal-main" id="signal-text">SMALL</div>
+              <div class="signal-main" id="signal-text">BIG</div>
             </div>
 
             <div class="orbs-col">
-              <!-- Orb 1 -->
               <div class="wavy-orb green-orb" id="orb-1">
                 <svg viewBox="0 0 100 100">
-                  <path d="M 38 7 Q 50 16 62 7" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 93 38 Q 84 50 93 62" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 62 93 Q 50 84 38 93" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 7 62 Q 16 50 7 38" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M 38 7 Q 50 16 62 7" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 93 38 Q 84 50 93 62" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 62 93 Q 50 84 38 93" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 7 62 Q 16 50 7 38" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
                 </svg>
-                <div class="orb-num" id="num-1">0</div>
+                <div class="orb-num" id="num-1">6</div>
               </div>
-              <!-- Orb 2 -->
+
               <div class="wavy-orb red-orb" id="orb-2">
                 <svg viewBox="0 0 100 100">
-                  <path d="M 38 7 Q 50 16 62 7" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 93 38 Q 84 50 93 62" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 62 93 Q 50 84 38 93" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M 7 62 Q 16 50 7 38" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M 38 7 Q 50 16 62 7" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 93 38 Q 84 50 93 62" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 62 93 Q 50 84 38 93" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+                  <path d="M 7 62 Q 16 50 7 38" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
                 </svg>
-                <div class="orb-num" id="num-2">4</div>
+                <div class="orb-num" id="num-2">9</div>
               </div>
             </div>
           </div>
 
-          <!-- Telegram Join Button -->
           <a href="https://t.me/patowari_vai_69x" target="_blank" class="tg-btn">
             <svg class="tg-icon" viewBox="0 0 24 24">
               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
             </svg>
-            JOIN TG (@patowari_vai_69x)
+            JOIN TG
           </a>
 
         </div>
 
-        <!-- Bottom Ticker -->
-        <div class="ticker-bar" style="margin-top: 6px;">
+        <div class="ticker-bar" style="margin-top: 4px;">
           <span>★ DK WIN</span>
-          <span>★ DK WIN</span>
+          <span>DK WIN ★</span>
         </div>
 
       </div>
@@ -604,7 +556,6 @@
   </div>
 
 <script>
-  // Password Authentication
   const CORRECT_PASS = "patowari-69";
   const loginBtn = document.getElementById("login-btn");
   const passInput = document.getElementById("pass-input");
@@ -616,7 +567,7 @@
     if (passInput.value.trim() === CORRECT_PASS) {
       loginView.style.display = "none";
       predictorView.style.display = "block";
-      updatePrediction();
+      updateClock();
     } else {
       errorMsg.style.display = "block";
     }
@@ -627,7 +578,6 @@
     if (e.key === "Enter") checkLogin();
   });
 
-  // Market State & Synchronized Wingo Period Calculation
   let currentSec = 30;
   let currentCode = "10005";
   let lastPeriod = "";
@@ -650,12 +600,11 @@
       currentSec = parseInt(btn.getAttribute("data-sec"));
       currentCode = btn.getAttribute("data-code");
       marketLabel.textContent = `AI (${btn.textContent} MARKET)`;
-      lastPeriod = ""; // Force instant refresh on tab change
+      lastPeriod = "";
       updateClock();
     });
   });
 
-  // Deterministic Hash Signal Generator per Period
   function generateSignalForPeriod(periodStr) {
     let hash = 0;
     for (let i = 0; i < periodStr.length; i++) {
@@ -663,38 +612,31 @@
       hash |= 0;
     }
     const absHash = Math.abs(hash);
-    const isBig = (absHash % 2) === 1;
+    const isBig = (absHash % 2) === 0;
 
     if (isBig) {
-      signalBox.classList.add("big-mode");
+      signalBox.classList.remove("small-mode");
       signalText.textContent = "BIG";
       const bigNums = [5, 6, 7, 8, 9];
-      const n1 = bigNums[absHash % 5];
-      const n2 = bigNums[(absHash + 2) % 5];
-      setOrbStyle(orb1, num1, n1);
-      setOrbStyle(orb2, num2, n2);
+      setOrbStyle(orb1, num1, bigNums[absHash % 5]);
+      setOrbStyle(orb2, num2, bigNums[(absHash + 2) % 5]);
     } else {
-      signalBox.classList.remove("big-mode");
+      signalBox.classList.add("small-mode");
       signalText.textContent = "SMALL";
       const smallNums = [0, 1, 2, 3, 4];
-      const n1 = smallNums[absHash % 5];
-      const n2 = smallNums[(absHash + 3) % 5];
-      setOrbStyle(orb1, num1, n1);
-      setOrbStyle(orb2, num2, n2);
+      setOrbStyle(orb1, num1, smallNums[absHash % 5]);
+      setOrbStyle(orb2, num2, smallNums[(absHash + 3) % 5]);
     }
   }
 
   function setOrbStyle(orbEl, numEl, digit) {
     numEl.textContent = digit;
-    // Wingo standard: 1,3,7,9,5 = Green | 0,2,4,6,8 = Red
     const isGreen = [1, 3, 5, 7, 9].includes(digit);
     orbEl.className = "wavy-orb " + (isGreen ? "green-orb" : "red-orb");
   }
 
   function updateClock() {
-    // Sync to UTC+5:30 / Standard Wingo Server Time (UTC+0 or UTC+6 aligned)
     const now = new Date();
-    // Standard Wingo period resets daily at 00:00 UTC+0 (or UTC+5:30 depending on server; DKWin uses UTC+0 date + round index)
     const utcYear = now.getUTCFullYear();
     const utcMonth = String(now.getUTCMonth() + 1).padStart(2, '0');
     const utcDay = String(now.getUTCDate()).padStart(2, '0');
@@ -714,14 +656,9 @@
     }
   }
 
-  function updatePrediction() {
-    updateClock();
-  }
-
   setInterval(updateClock, 1000);
   updateClock();
 
-  // Minimize & Restore Logic
   const wrapper = document.getElementById("predictor-wrapper");
   const minBtn = document.getElementById("minimize-btn");
   const minIcon = document.getElementById("minimized-icon");
@@ -731,7 +668,6 @@
     minIcon.style.display = "block";
   });
 
-  // Draggable Logic (Touch & Mouse)
   function makeDraggable(el, handle) {
     let isDragging = false;
     let startX, startY, initialLeft, initialTop;
